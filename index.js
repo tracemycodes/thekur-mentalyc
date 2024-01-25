@@ -44,6 +44,9 @@ app.get('/', (req, res) => {
   res.send('API running');
 });
 
+// Define routes for audio-related functionality
+app.use('/api/audio', require(`./routes/audio`));
+
 const PORT = process.env.PORT || 8000;
 
 server.listen(PORT, () => {
